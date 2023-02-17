@@ -1,3 +1,8 @@
+---
+title: "Habits"
+output: pdf_document
+---
+
 # Shell
 
 - [Basic](#basic)
@@ -11,55 +16,74 @@
 
 ## Basic
 
-**常用程序**
+#### 常用程序
 
-|name|usage|
-|---|---|
-|`apt`|包管理器，`apt-get`和`apt-cache`命令的子集|
-|`bat`|`cat`更好替代|
-|`broot`| 交互式文件树|
-|`cat`|打印文件内容|
-|`cd`|修改当前工作目录|
-|`chmod`|控制用户对文件的操作权限
-|`clear`|清屏|
-|`cp`|复制文件|
-|`curl`|利用URL规则的文件传输(上传和下载)工具|
-|`date`|显示时间|
-|`diff`|逐行比较文件差异|
-|`echo`|输出内容|
-|`env`|显示系统中已存在的环境变量，以及在定义的环境中执行指令|
-|`fd`|`find` 更好替代|
-|`fe`|使用`fzf` 打开文件并编辑|
-|`fgs`|使用`fzf` 打开 git status|
-|`fs`|使用`fzf` 打开scoop|
-|`find`|在指定目录下查找文件|
-|`fzf`|模糊搜索文件或输入文本|
-|`grep`|查找文件里符合条件的字符串|
-|`history`|命令行历史记录|
-|`Invoke-PsFzfRipgrep`|同时使用`fzf`和`ripgrep`搜索字符串|
-|`locate`|快速查找文件名|
-|`ls`|显示目录下所有文件, powershell下包含查找功能|
-|`man`|获取指令使用方法|
-|`mkdir`|创建目录|
-|`mv`|重命名和移动文件|
-|`npm`|Node.js默认包管理器|
-|`pwd`|显示工作目录名|
-|`rg`|`gerp` 更好替代|
-|`rm`|删除文件|
-|`rmdir`| 删除目录|
-|`shellcheck`|检查 .sh 文件语法错误|
-|`sudo`|以管理员模式执行|
-|`tail`|打印输入的最后几行|
-|`tee`|输出到标准输出并复制到文件中|
-|`test` 或 `[]`|用于测试条件，返回`true`或`false`|
-|`tldr`|社区驱动的简化版`man`页面, 提供了简明易懂的命令重要信息和用法示例摘要|
-|`touch`|用于修改文件或者目录的时间属性，若文件不存在，用于创建新文件|
-|`which`|获取命令程序存储位置|
-|`wget`|使用HTTP、HTTPS或FTP协议的网页下载工具|
-|`xdg-open`|根据文件类型自动调用对应默认打开程序|
+| name                  | usage                                                                 |
+| --------------------- | --------------------------------------------------------------------- |
+| `alias`               | define or display aliases                                             |
+| `apt`                 | 包管理器，`apt-get`和`apt-cache`命令的子集                            |
+| `bat`                 | `cat`更好替代                                                         |
+| `broot`               | 交互式文件树                                                          |
+| `cat`                 | 打印文件内容                                                          |
+| `cd`                  | 修改当前工作目录                                                      |
+| `chmod`               | 控制用户对文件的操作权限                                              |
+| `clear`               | 清屏                                                                  |
+| `cp`                  | 复制文件                                                              |
+| `curl`                | 利用URL规则的文件传输(上传和下载)工具                                 |
+| `date`                | 显示时间                                                              |
+| `diff`                | 逐行比较文件差异                                                      |
+| `echo`                | 输出内容                                                              |
+| `env`                 | 显示系统中已存在的环境变量，以及在定义的环境中执行指令                |
+| `fd`                  | `find` 更好替代                                                       |
+| `fe`                  | 使用`fzf` 打开文件并编辑                                              |
+| `fgs`                 | 使用`fzf` 打开 git status                                             |
+| `fs`                  | 使用`fzf` 打开scoop                                                   |
+| `find`                | 在指定目录下查找文件                                                  |
+| `fzf`                 | 模糊搜索文件或输入文本                                                |
+| `grep`                | 查找文件里符合条件的字符串                                            |
+| `history`             | 命令行历史记录                                                        |
+| `Invoke-PsFzfRipgrep` | 同时使用`fzf`和`ripgrep`搜索字符串                                    |
+| `jobs`                | 展示所有进程                                                          |
+| `locate`              | 快速查找文件名                                                        |
+| `ls`                  | 显示目录下所有文件, powershell下包含查找功能                          |
+| `man`                 | 获取指令使用方法                                                      |
+| `mkdir`               | 创建目录                                                              |
+| `npm`                 | Node.js默认包管理器                                                   |
+| `pwd`                 | 显示工作目录名                                                        |
+| `rg`                  | `gerp` 更好替代                                                       |
+| `rm`                  | 删除文件                                                              |
+| `rmdir`               | 删除目录                                                              |
+| `shellcheck`          | 检查 .sh 文件语法错误                                                 |
+| `tail`                | 打印输入的最后几行                                                    |
+| `tee`                 | 输出到标准输出并复制到文件中                                          |
+| `test` 或 `[]`        | 用于测试条件，返回`true`或`false`                                     |
+| `tldr`                | 社区驱动的简化版`man`页面, 提供了简明易懂的命令重要信息和用法示例摘要 |
+| `touch`               | 用于修改文件或者目录的时间属性，若文件不存在，用于创建新文件          |
+| `which`               | 获取命令程序存储位置                                                  |
+| `wget`                | 使用HTTP、HTTPS或FTP协议的网页下载工具                                |
+| `xdg-open`            | 根据文件类型自动调用对应默认打开程序                                  |
 
 
-**保留变量**
+#### Job Control
+
+| command | description                                   |
+| ------- | --------------------------------------------- |
+| `bg`    | run or continue jobs in background            |
+| `fg`    | run or continue jobs in foreground            |
+| `jobs`  | display status of jobs in the current session |
+| `nohub` | run a command immune to hangups               |
+| `sleep` | delay for a specified amount of time          |
+| `kill`  | send a signal to a process                    |
+
+#### Terminal Multiplexers
+
+
+| command | description          |
+| ------- | -------------------- |
+| `tmux`  | Terminal multiplexer |
+
+##### shortcuts
+#### 保留变量
 
 * $0 表示脚本名字
 * $1~9 表示第 1 个到第 9 个参数
@@ -74,7 +98,7 @@
 
 * $PATH 环境变量
 
-**地址**
+#### 地址
 
 * `/` 表示根目录
 * `.` 表示当前目录
@@ -83,7 +107,7 @@
 * `-` 表示上一次所处的目录
 
 
-**其他**
+#### 其他
 
 * /sys 目录下以文件形式存储内核参数
 * ctrl + c 退出
@@ -103,7 +127,7 @@
 
 ## Stream
 
-**重定向流方向**
+#### 重定向流方向
 
 * `<` 重定向标准输入流，`>`或`1>` 重定向标准输出流, `2>` 重定向标准错误流，`&>` 重定向标准输出流和标准错误流
 * `>>` 追加内容到文件，适用以上标准输出流和标准错误流的重定向
