@@ -16,71 +16,134 @@ output: pdf_document
 
 ## Basic
 
-#### 常用程序
+#### Common
 
-| name                  | usage                                                                 |
-| --------------------- | --------------------------------------------------------------------- |
-| `alias`               | define or display aliases                                             |
-| `apt`                 | 包管理器，`apt-get`和`apt-cache`命令的子集                            |
-| `bat`                 | `cat`更好替代                                                         |
-| `broot`               | 交互式文件树                                                          |
-| `cat`                 | 打印文件内容                                                          |
-| `cd`                  | 修改当前工作目录                                                      |
-| `chmod`               | 控制用户对文件的操作权限                                              |
-| `clear`               | 清屏                                                                  |
-| `cp`                  | 复制文件                                                              |
-| `curl`                | 利用URL规则的文件传输(上传和下载)工具                                 |
-| `date`                | 显示时间                                                              |
-| `diff`                | 逐行比较文件差异                                                      |
-| `echo`                | 输出内容                                                              |
-| `env`                 | 显示系统中已存在的环境变量，以及在定义的环境中执行指令                |
-| `fd`                  | `find` 更好替代                                                       |
-| `fe`                  | 使用`fzf` 打开文件并编辑                                              |
-| `fgs`                 | 使用`fzf` 打开 git status                                             |
-| `fs`                  | 使用`fzf` 打开scoop                                                   |
-| `find`                | 在指定目录下查找文件                                                  |
-| `fzf`                 | 模糊搜索文件或输入文本                                                |
-| `grep`                | 查找文件里符合条件的字符串                                            |
-| `history`             | 命令行历史记录                                                        |
-| `Invoke-PsFzfRipgrep` | 同时使用`fzf`和`ripgrep`搜索字符串                                    |
-| `jobs`                | 展示所有进程                                                          |
-| `locate`              | 快速查找文件名                                                        |
-| `ls`                  | 显示目录下所有文件, powershell下包含查找功能                          |
-| `man`                 | 获取指令使用方法                                                      |
-| `mkdir`               | 创建目录                                                              |
-| `npm`                 | Node.js默认包管理器                                                   |
-| `pwd`                 | 显示工作目录名                                                        |
-| `rg`                  | `gerp` 更好替代                                                       |
-| `rm`                  | 删除文件                                                              |
-| `rmdir`               | 删除目录                                                              |
-| `shellcheck`          | 检查 .sh 文件语法错误                                                 |
-| `tail`                | 打印输入的最后几行                                                    |
-| `tee`                 | 输出到标准输出并复制到文件中                                          |
-| `test` 或 `[]`        | 用于测试条件，返回`true`或`false`                                     |
-| `tldr`                | 社区驱动的简化版`man`页面, 提供了简明易懂的命令重要信息和用法示例摘要 |
-| `touch`               | 用于修改文件或者目录的时间属性，若文件不存在，用于创建新文件          |
-| `which`               | 获取命令程序存储位置                                                  |
-| `wget`                | 使用HTTP、HTTPS或FTP协议的网页下载工具                                |
-| `xdg-open`            | 根据文件类型自动调用对应默认打开程序                                  |
+| name      | usage                                                  |
+| --------- | ------------------------------------------------------ |
+| `alias`   | Define or display aliases                              |
+| `cd`      | 修改当前工作目录                                       |
+| `chmod`   | 控制用户对文件的操作权限                               |
+| `clear`   | 清屏                                                   |
+| `cp`      | 复制文件                                               |
+| `date`    | 显示时间                                               |
+| `env`     | 显示系统中已存在的环境变量，以及在定义的环境中执行指令 |
+| `history` | 命令行历史记录                                         |
+| `ln`      | Creates links to files and directories                 |
+| `ls`      | 显示目录下所有文件, powershell下包含查找功能           |
+| `mkdir`   | 创建目录                                               |
+| `pwd`     | 显示工作目录名                                         |
+| `rm`      | 删除文件                                               |
+| `rmdir`   | 删除目录                                               |
+| `which`   | 获取命令程序存储位置                                   |
 
+
+#### Manager
+
+| name      | usage                                                                                                                            |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `apt`     | Package management system, enables some options better suited for interactive usage by default compared to apt-get and apt-cache |
+| `chezmoi` | A multi-machine dotfile manager                                                                                                  |
+| `conda`   | Package, dependency and environment management for any programming language                                                      |
+| `docker`  | Manage Docker containers and images                                                                                              |
+| `npm`     | Node.js默认包管理器                                                                                                              |
+
+#### System
+
+| name       | usage                                                                                                                          |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `free`     | Display amount of free and used memory in the system                                                                           |
+| `passwd`   | Change user password                                                                                                           |
+| `ps`       | Report a snapshot of the current processes                                                                                     |
+| `top`      | Display  system  summary  information  as  well  as a list of processes or threads currently being managed by the Linux kernel |
+| `tty`      | Print the file name of the terminal connected                                                                                  |
+| `uptime`   | Tell how long the system has been running                                                                                      |
+| `vmstat`   | Reports information about processes, memory, paging, block IO, traps, disks and cpu activity                                   |
+| `who`      | Show who is logged on                                                                                                          |
+| `whoami`   | Print  the  user  name  associated with the current effective user ID                                                          |
+| `wslfetch` | A WSL Screenshot Information Tool to print information in a elegant way                                                        |
+| `wslsys`   | A WSL system information printer to print out some basic system information                                                    |
+| `wslact`   | A set of quick actions for WSL such as creating startup tasks and manually sync time between Windows and WSL                   |
 
 #### Job Control
 
-| command | description                                   |
-| ------- | --------------------------------------------- |
-| `bg`    | run or continue jobs in background            |
-| `fg`    | run or continue jobs in foreground            |
-| `jobs`  | display status of jobs in the current session |
-| `nohub` | run a command immune to hangups               |
-| `sleep` | delay for a specified amount of time          |
-| `kill`  | send a signal to a process                    |
+| command        | description                                                                          |
+| -------------- | ------------------------------------------------------------------------------------ |
+| `bg`           | Run or continue jobs in background                                                   |
+| `fg`           | Run or continue jobs in foreground                                                   |
+| `jobs`         | Viewing information about processes spawned by the current shell                     |
+| `kill`         | Send a signal to a process                                                           |
+| `nohub`        | Run a command immune to hangups                                                      |
+| `sleep`        | Delay for a specified amount of time                                                 |
+| `test` 或 `[]` | 用于测试条件，返回`true`或`false`                                                    |
+| `time`         | Run programs and summarize system resource usage                                     |
+| `tmux`         | Terminal multiplexer                                                                 |
+| `wslgsu`       | This tool allows you to generate a WSL startup Task using the Windows Task Scheduler |
+#### Network
 
-#### Terminal Multiplexers
+| name   | usage                                                                                      |
+| ------ | ------------------------------------------------------------------------------------------ |
+| `curl` | 利用URL规则的文件传输(上传和下载)工具                                                      |
+| `scp`  | Scp copies files between hosts on a network                                                |
+| `ssh`  | a program for logging into a remote machine and for executing commands on a remote machine |
+| `wget` | 使用HTTP、HTTPS或FTP协议的网页下载工具                                                     |
+
+#### Check
+
+| name       | usage                                              |
+| ---------- | -------------------------------------------------- |
+| `bat`      | Better alternative of `cat` and `less`             |
+| `broot`    | 交互式文件树                                       |
+| `cat`      | Concatenate files and print on the standard output |
+| `head`     | Output the first part of files                     |
+| `tail`     | Output the last part of files                      |
+| `xdg-open` | 根据文件类型自动调用对应默认打开程序               |
+
+#### Find
+
+| name     | usage                      |
+| -------- | -------------------------- |
+| `fd`     | `find` 更好替代            |
+| `find`   | 在指定目录下查找文件       |
+| `fzf`    | 模糊搜索文件或输入文本     |
+| `grep`   | 查找文件里符合条件的字符串 |
+| `locate` | 快速查找文件名             |
+| `rg`     | `gerp` 更好替代            |
+
+#### Other Tools
+
+| name         | usage                                                                                                                                                                 |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `bc`         | An arbitrary precision calculator language                                                                                                                            |
+| `diff`       | 逐行比较文件差异                                                                                                                                                      |
+| `echo`       | 输出内容                                                                                                                                                              |
+| `man`        | 获取指令使用方法                                                                                                                                                      |
+| `od`         | Dump files in octal and other formats                                                                                                                                 |
+| `shellcheck` | 检查 .sh 文件语法错误                                                                                                                                                 |
+| `sort`       | Sort lines of text files                                                                                                                                              |
+| `tar`        | An archiving program designed to store multiple files in a single file (an archive), and to  manipulate such  archives                                                |
+| `tee`        | Read from standard input and write to standard output and files                                                                                                       |
+| `tldr`       | 社区驱动的简化版`man`页面, 提供了简明易懂的命令重要信息和用法示例摘要                                                                                                 |
+| `touch`      | 用于修改文件或者目录的时间属性，若文件不存在，用于创建新文件                                                                                                          |
+| `tr`         | Replace,  squeeze,  and/or  delete  characters  from standard input, writing to standard output                                                                       |
+| `uniq`       | Report or omit repeated lines                                                                                                                                         |
+| `wc`         | Print line, word, and byte counts for each file                                                                                                                       |
+| `wslupath`   | A WSL Windows path Converter that can convert Windows path to other styles of path                                                                                    |
+| `wslusc`     | A WSL shortcut creator to create shortcut on Windows Desktop                                                                                                          |
+| `wslvar`     | A WSL tool to help you get Windows system environment variables                                                                                                       |
+| `wslview`    | A file viewer on WSL that allows you to open files and folders from WSL in Windows and a fake web browser that allows opening urls in your default browser on Windows |
+| `7z`         | A file archiver with high compression ratio format                                                                                                                    |
 
 
-| command | description          |
-| ------- | -------------------- |
-| `tmux`  | Terminal multiplexer |
+
+#### Windows
+
+
+| name                  | usage                              |
+| --------------------- | ---------------------------------- |
+| `fe`                  | 使用`fzf` 打开文件并编辑           |
+| `fgs`                 | 使用`fzf` 打开 git status          |
+| `fs`                  | 使用`fzf` 打开scoop                |
+| `Invoke-PsFzfRipgrep` | 同时使用`fzf`和`ripgrep`搜索字符串 |
 
 ##### shortcuts
 #### 保留变量
