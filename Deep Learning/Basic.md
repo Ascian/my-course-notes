@@ -10,6 +10,8 @@
 - [Optimizer algorithm](#optimizer-algorithm)
   - [Minibatch Stochastic Gradient Descent](#minibatch-stochastic-gradient-descent)
   - [Adam Optimizer](#adam-optimizer)
+- [降低过拟合](#降低过拟合)
+  - [Drop out](#drop-out)
 
 
 ## [Loss Function](https://towardsdatascience.com/what-is-loss-function-1e2605aeb904)
@@ -40,7 +42,7 @@ $\hat y_i$ denotes to the probability of the instance belonging to the class
 
 Likelihood function: \[P(Y,Y-|\theta) = \prod_{i\in Y}{\hat y_i}\prod_{i \in Y-}{(1- \hat y_i)}\]
 
-Loss function: \[L = - \sum_{i \in Y}{\log \hat y_i} - \sum_{i \in Y-}{\log (1- \hat y_i)}\]\[ = - \sum_i{y_i \log \hat y_i + (i-y_i)log (1 - \hat y_i)} \]
+Loss function: \[L = - \sum_{i \in Y}{\log \hat y_i} - \sum_{i \in Y-}{\log (1- \hat y_i)}\]\[ = - \sum_i{y_i \log \hat y_i + (1-y_i)log (1 - \hat y_i)} \]
 
 When the number of classes is more than 2, the loss function can be simplified:\[L = - \sum_i{y_i \log \hat y_i} \]
 
@@ -87,5 +89,19 @@ In each iteration \(t\)
 > \[W_t = \beta W_{t-1} + (1-\beta) \theta_t\] \(\beta\) is the weight parameter deciding how important the current observation is in the calculation of the EWA, \(W_t\) is the EWA for day t, \(\theta_t\) is the value for day t
 > If we expand \(W_t\), we have:\[W_t = (1 - \beta)(\theta_t + \beta \theta_{t-1} + ... + \beta^{t-1} \theta_1)\] \[ = (1-\beta)(\beta^0, \beta^1, ..., \beta^{t-1})·(\theta_t, \theta_{t-1}, ..., \theta_1)\] \((\beta^0, \beta^1, ..., \beta^{t-1})\) is called the exponential weight
 > The bigger \(\beta\) makes the curve smoother and less noisy![EWA](img/EWA.webp)
+
+## 降低过拟合
+
+### Drop out
+
+1. 相当于一次捕捉某一样本未被抛弃的特征维度限制下的一片样本空间的数据，每 drop out 一次相当于在这片数据种继续增加限制维度，一次训练的样本空间更小
+
+但未使用 drop out 相当于一次只捕捉一个样本数据，非常容易过拟合
+
+2. 相当于依次只看到样本的一部分，每次 drop out 不断补全对于样本的认知，降低了对于该样本的拟合程度
+
+未使用 drop out 相当于可以直接看到样本的全部，非常容易过拟合
+
+
 
 
