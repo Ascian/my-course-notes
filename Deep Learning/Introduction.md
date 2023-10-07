@@ -41,7 +41,7 @@ Unsupervised learning describes tasks where we are **given a giant dump of data 
 
 Reinforcement learning gives a very general statement of a problem, in which an agent **interacts with an environment over a series of time steps**. At each time step, the agent receives some observation from the environment and must choose an action that is subsequently transmitted back to the environment via some mechanism (sometimes called an actuator). Finally, the agent receives a reward from the environment. 
 
-![rl](img/rl-environment.svg)
+![rl](.assets/rl-environment.svg)
 
 
 
